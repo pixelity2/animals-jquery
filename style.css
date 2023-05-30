@@ -144,6 +144,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .navbar ul {
@@ -161,6 +164,7 @@ body {
   color: white;
   text-decoration: none;
 }
+
 .navbar ul li a:hover {
   background-color: white;
   color: blue;
@@ -192,4 +196,15 @@ body {
 }
 body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#donateMe{
+  font-size: 38px;
+  background-color: #333;
+  color: wheat;
+}
+#donateMe a{
+  color: wheat;
+}
+#donateMe:hover{
+  background-color: #1b1919;
 }

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animals - Contact</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>     
+        <link rel="icon" href="img/logo.jpg">
+        <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/6474be1774285f0ec46e420f/1h1k0d303';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: Arial, sans-serif;
+        }
+    
+        .container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+        }
+    
+        .contact-form {
+          max-width: 400px;
+          padding: 20px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+    
+        .contact-form h2 {
+          text-align: center;
+        }
+    
+        .contact-form input[type="text"],
+        .contact-form textarea {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+        }
+    
+        .contact-form textarea {
+          height: 120px;
+        }
+    
+        .contact-form button[type="submit"] {
+          width: 100%;
+          padding: 10px;
+          background-color: #4CAF50;
+          color: #fff;
+          border: none;
+          border-radius: 3px;
+          cursor: pointer;
+        }
+      </style>
+    </head>
+    <body>
+<body>
+    <div class="container">
+    <form class="contact-form" action="https://formspree.io/f/xyyavago" method="post" id="contactForm">
+      <h2>Contact Us</h2>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" id="contactButton">Send Message</button>
+      <p id="formStatus"></p>
+    </form>
+  </div>
+    <div class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contribute.html">Contribute</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul><br><br><br>
+    </div>
+    
+<div class="footers" id="footers">
+  <div class="footer">
+      <h3>Contact us:</h3>
+      <h4>If you would like to contact us: </h4>
+      <h4>E-mail: <span>tzgjim@gmail.com</span></h4>
+      <h4>Phone number: <span>+383 45 722 814</span></h4>   
+  </div>
+  
+  <div class="footer">
+      <h3>Find us at: </h3>
+      <h4><a href="https://github.com/pixelity2">GitHub</a></h4>
+      <h4><a href="https://www.linkedin.com/in/zgjim-topojani/">LinkedIn</a></h4>
+      <h4><a href="https://youtube.com/@pixelity2">YouTube</a></h4>    
+  </div>
+  <div class="footer">
+      <h3>Quick links: </h3>  
+      <h4><a href="https://pixelity2.netlify.app/">Our Website</a></h4>
+      <h4><a href="https://pixelity2.netlify.app/">LubroWeb</a></h4>
+      <h4><a href="https://rudieta.netlify.app/">Rudieta</a></h4>
+  </div>
+  <div class="footer" id="newsletter">
+      <h3>Message Us:  </h3>    
+      <form class="newsletter-form" id="my-form" action="https://formspree.io/f/xyyavago" method="POST">
+          <input type="text" name="name" placeholder="Name"/><br>
+          <input type="email" name="email" placeholder="E-mail"/><br>
+          <textarea name="Message" id="" cols="20" rows="5" placeholder="Message"></textarea><br>
+          <button id="my-form-button">Submit</button>
+          <p id="my-form-status"></p>
+        </form>
+  </div>
+  <footer>
+      <p>&copy; 2023 Zgjim Topojani as part of Pixelity2 Inc.</p>
+    </footer>
+  </div>
+<script src="slideshow.js"></script>   
+<script src="script1.js"></script>
+<script>
+  var form = document.getElementById("contactForm");
+  
+  async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("formStatus");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+          'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        alert("Message has been sent. We will respond as fast as we can. You may only recieve mails from us on one of these e-mails: tzgjim@gmail.com and pixelity2@gmail.com")
+        form.reset()
+      } else {
+        response.json().then(data => {
+          if (Object.hasOwn(data, 'errors')) {
+            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+          } else {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+          }
+        })
+      }
+    }).catch(error => {
+      status.innerHTML = "Oops! There was a problem submitting your form"
+    });
+  }
+  form.addEventListener("submit", handleSubmit)
+</script>
+</body>
+</html>
