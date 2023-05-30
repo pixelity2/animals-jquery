@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Animals - Home</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="icon" href="img/logo.jpg">
+        <link rel="stylesheet" href="style4.css">
+    <title>Guess the Number</title>
+    <style>
+        #divi{
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0px;
+            border: 1px solid green;  
+            background: url(img/bg.jpg);
+            background-size: cover;
+                  
+        }
+        h1{
+            font-size: 80px;
+        }
+        p{
+            font-size: 64px;
+        }
+        input{
+            padding: 35px;
+            font-size: 35px;
+            background-color: bisque;
+            border: 1px solid burlywood;
+            border-radius: 15px;
+        }
+        button{
+            padding: 55px;
+            font-size: 35px;
+            background-color: burlywood;
+            border: 1px solid burlywood;
+            border-radius: 15px;
+        } 
+        #quiz {
+            margin: 50px auto;
+            width: 500px;
+            text-align: left;
+        }
+        h2 {
+            font-size: 24px;
+        }
+        ul {
+            list-style-type: none;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+        #score {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contribute.html">Contribute</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="sign_in.html">Authenticate</a></li>
+          <li><a href="game.html">Game</a></li>
+        </ul>
+        </div><br>
+    <div id="divi">
+    <h1>Guess the Number</h1>
+    <p class="big">Try to guess the random number between 1 and 1000.</p><br>
+    <input type="number" placeholder="Enter your guess" id="guessInput"><br>
+    <button id="guessButton">Guess</button>
+    <p id="message" class="big">Start the game to show: </p>
+    <p id="guessHistory" class="big">Guessed numbers:</p>
+</div>
+
+
+    <script>
+        $(document).ready(function() {
+            var randomNumber = Math.floor(Math.random() * 1000  ) + 1;
+            var guessedNumbers = [];
+
+            $("#guessButton").click(function() {
+                var guess = parseInt($("#guessInput").val());
+
+                if (isNaN(guess)) {
+                    $("#message").text("Invalid input. Please enter a number.");
+                } else if (guess < 1 || guess > 1000) {
+                    $("#message").text("Please enter a number between 1 and 1000.");
+                } else if (guessedNumbers.includes(guess)) {
+                    $("#message").text("You have already guessed that number.");
+                } else {
+                    if (guess < randomNumber) {
+                        $("#message").text("Too low! Try again.");
+                    } else if (guess > randomNumber) {
+                        $("#message").text("Too high! Try again.");
+                    } else {
+                        $("#message").text("Congratulations! You guessed the number.");
+                    }
+                    guessedNumbers.push(guess);
+                    $("#guessHistory").append(" " + guess + ", ");
+                }
+
+                $("#guessInput").val("");
+            });
+        });
+
+        function resize(){
+  let winWidth = $(window).width();
+  $("#divi").css(
+    "width", winWidth
+  )
+}
+resize()
+
+window.addEventListener('resize', function(){
+  resize()
+});
+    </script>
+    <div class="footers" id="footers">
+        <div class="footer">
+            <h3>Contact us:</h3>
+            <h4>If you would like to contact us: </h4>
+            <h4>E-mail: <span>tzgjim@gmail.com</span></h4>
+            <h4>Phone number: <span>+383 45 722 814</span></h4>   
+        </div>
+        
+        <div class="footer">
+            <h3>Find us at: </h3>
+            <h4><a href="https://github.com/pixelity2">GitHub</a></h4>
+            <h4><a href="https://www.linkedin.com/in/zgjim-topojani/">LinkedIn</a></h4>
+            <h4><a href="https://youtube.com/@pixelity2">YouTube</a></h4>    
+        </div>
+        <div class="footer">
+            <h3>Quick links: </h3>  
+            <h4><a href="https://pixelity2.netlify.app/">Our Website</a></h4>
+            <h4><a href="https://pixelity2.netlify.app/">LubroWeb</a></h4>
+            <h4><a href="https://rudieta.netlify.app/">Rudieta</a></h4>
+        </div>
+        <div class="footer" id="newsletter">
+            <h3>Message Us and Rate The Website:  </h3>    
+            <form class="newsletter-form" id="my-form" action="https://formspree.io/f/xyyavago" method="POST">
+                <input type="text" name="name" placeholder="Name"/><br>
+                <input type="email" name="email" placeholder="E-mail"/><br>
+                <textarea name="Message" id="" cols="20" rows="5" placeholder="Message "></textarea><br>
+                <button id="my-form-button">Submit</button>
+                <p id="my-form-status"></p>
+              </form>
+        </div>
+        <footer>
+            <p style="font-size: 18px;">&copy; 2023 Zgjim Topojani and Luan Grajçevci Inc.</p>
+          </footer>
+        </div>
+        <script src="slideshow.js"></script>   
+<script src="script1.js"></script>
+</body>
+</html>

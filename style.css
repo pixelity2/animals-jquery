@@ -82,6 +82,11 @@ flex-grow: 1;
 padding: 10px;
 font-size: 16px;
 }
+.newsletter-form input[type="number"] {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  }
 .newsletter-form textarea{
   flex-grow: 1;
   padding: 10px;

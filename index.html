@@ -21,14 +21,15 @@
   <!--End of Tawk.to Script-->
     </head>
 <body>
-    <div class="navbar">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contribute.html">Contribute</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="sign_in.html">Authenticate</a></li>
-      </ul>
+      <div class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contribute.html">Contribute</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="sign_in.html">Authenticate</a></li>
+          <li><a href="game.html">Game</a></li>
+        </ul>
     </div><br><br><br>
     <h1 style="font-size: 50px;">Our Mission</h1>
     <div id="mission">
@@ -90,11 +91,12 @@
       <h4><a href="https://rudieta.netlify.app/">Rudieta</a></h4>
   </div>
   <div class="footer" id="newsletter">
-      <h3>Message Us:  </h3>    
+      <h3>Message Us and Rate The Website:  </h3>    
       <form class="newsletter-form" id="my-form" action="https://formspree.io/f/xyyavago" method="POST">
           <input type="text" name="name" placeholder="Name"/><br>
           <input type="email" name="email" placeholder="E-mail"/><br>
-          <textarea name="Message" id="" cols="20" rows="5" placeholder="Message"></textarea><br>
+          <input type="number" name="rating" id="rating" placeholder="Rating out of 10">
+          <textarea name="Message" id="" cols="20" rows="5" placeholder="Message/Feedback "></textarea><br>
           <button id="my-form-button">Submit</button>
           <p id="my-form-status"></p>
         </form>
