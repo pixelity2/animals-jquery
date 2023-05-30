@@ -34,7 +34,7 @@ div{
 footer {
   padding: 20px;
   text-align: center;
-  color: antiquewhite;
+  color: rgb(68, 42, 9);
 }
 #i1, #i2, #i3{
   font-size: 35px;
@@ -44,10 +44,10 @@ footer {
 }
 .footer{
   text-align: center;
-  color: antiquewhite;
+  color: rgb(12, 42, 54);
 }
 .footers{
-  background-color: rgb(72, 100, 152);
+  background-color: #5eb9a2;
 }
 .footers {
   display: flex;
@@ -67,7 +67,7 @@ span{
 }
 a{
   text-decoration: none;
-  color: blueviolet;
+  color: rgb(38, 120, 153);
 }
 
 
@@ -113,13 +113,11 @@ font-size: 16px;
 
 .slide {
   display: none;
-  float: left;
   margin-top: 20px;
 }
 img{
   width: 800px;
-  float: left;
-  border: 5px solid rgb(0, 255, 106);
+  border: 5px solid rgb(0, 238, 255);
 }
 .slide-caption{
   font-size: 22px;
@@ -138,7 +136,7 @@ body {
 }
 
 .navbar {
-  background-color: blue;
+  background-color: rgb(54, 160, 155);
   height: 80px;
   width: 100%;
   display: flex;
@@ -147,6 +145,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 
 .navbar ul {
@@ -163,11 +162,12 @@ body {
 .navbar ul li a {
   color: white;
   text-decoration: none;
+  padding: 30px;
 }
 
-.navbar ul li a:hover {
-  background-color: white;
-  color: blue;
+.navbar ul li a:hover{
+  background-color: rgb(16, 81, 180);
+  border-bottom: 5px solid #08968a;
 }
 /* mission */
 #mission {
@@ -202,9 +202,21 @@ body{
   background-color: #333;
   color: wheat;
 }
-#donateMe a{
+#donateMe{
   color: wheat;
+  font-size: 100px;
+  padding: 82px;
+  border: 1px sold rgb(168, 55, 55);
+  background-color: #5eb9a2;
+  border-radius: 32px;
+}
+#donateTxt{
+  font-size: 64px;
 }
 #donateMe:hover{
-  background-color: #1b1919;
+  background-color: #63a582;
+}
+#donateDiv{
+  margin-top: 250px;
+  margin-bottom: 250px;
 }
