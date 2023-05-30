@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animals - Home</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  
+        <link rel="stylesheet" href="style2.css"> 
+        <link rel="stylesheet" href="style.css">
+        <script>
+            $(document).ready(function(){
+                $('#checkout_card_number').creditCardTypeDetector({ 'credit_card_logos' : '.card_logos' });
+            });
+        </script>
+        <link rel="icon" href="img/logo.jpg">
+    </head>
+    <style>
+        /* CSS code */
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+        
+        .container {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px;
+        }
+        
+        h1 {
+          text-align: center;
+        }
+        
+        p {
+          line-height: 1.5;
+        }
+      </style>
+<body>
+    <div class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contribute.html">Contribute</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h1>Help us achieve our mission</h1>
+      <h3>100% of the donations are used to help of animals</h3>
+      <i>We accept all type of cards: VISA, Mastercard, AMEX, Diners, Discovers and JCB <br>
+      Including PayPal</i><br><br><br><br>
+    </div><br>  
+ 
+    <div id="method"><form>
+    <input id="name" type="text" class="stripe_card_number" required="required" placeholder="How Much?"><br><br>
+
+    <input id="checkout_card_number" type="text" size="20" pattern="[0-9]*" autocomplete="off" class="stripe_card_number" required="required"  placeholder="Card Number"/><br>
+
+    <input id="cvv" type="number" size="4" pattern="[0-9]*" autocomplete="off" class="stripe_card_number" required="required" placeholder="CVV Number"><br>
+
+    <input id="expmonth" type="number" pattern="[0-9]*" size="2" autocomplete="off" class="stripe_card_number" required="required" placeholder="Expiry month"><br>
+
+    <input id="expyear" type="number" pattern="[0-9]*" size="4" autocomplete="off" class="stripe_card_number" required="required" maxlength="4" placeholder="Expiry Year"><br>
+    
+    <input id="name" type="number" class="stripe_card_number" required="required" placeholder="Name on Card"><br>
+
+    <input type="email" name="email" id="email" placeholder="E-mail for confirmation"><br><br>
+    <i>By clicking 'Complete Purchase' you agree to our Purchase and Refund Policy</i>
+    <input type="submit" value="Complete Purchase"></input><br><br>
+  </form>
+  </div>
+
+<br>
+    <ul class="card_logos">
+        <li class="card_visa">Visa</li>
+        <li class="card_mastercard">Mastercard</li>
+        <li class="card_amex">American Express</li>
+        <li class="card_discover">Discover</li>
+        <li class="card_jcb">JCB</li>
+        <li class="card_diners">Diners Club</li>
+    </ul><br>
+    <button id="paypal"><a href="https://paypal.me/pixelity2">Donate using PayPal</a></button> <br><br> 
+    <div class="footers" id="footers">
+      <div class="footer">
+          <h3>Contact us:</h3>
+          <h4>If you would like to contact us: </h4>
+          <h4>E-mail: <span>tzgjim@gmail.com</span></h4>
+          <h4>Phone number: <span>+383 45 722 814</span></h4>   
+      </div>
+      
+      <div class="footer">
+          <h3>Find us at: </h3>
+          <h4><a href="https://github.com/pixelity2">GitHub</a></h4>
+          <h4><a href="https://www.linkedin.com/in/zgjim-topojani/">LinkedIn</a></h4>
+          <h4><a href="https://youtube.com/@pixelity2">YouTube</a></h4>    
+      </div>
+      <div class="footer">
+          <h3>Quick links: </h3>  
+          <h4><a href="https://pixelity2.netlify.app/">Our Website</a></h4>
+          <h4><a href="https://pixelity2.netlify.app/">LubroWeb</a></h4>
+          <h4><a href="https://rudieta.netlify.app/">Rudieta</a></h4>
+      </div>
+      <div class="footer" id="newsletter">
+          <h3>E-mail Newsletter: </h3>    
+          <form class="newsletter-form" id="my-form" action="https://formspree.io/f/xyyavago" method="POST">
+              <input type="text" name="name" placeholder="Name"/><br>
+              <input type="email" name="email" placeholder="E-mail"/><br>
+              <button id="my-form-button">Submit</button>
+              <p id="my-form-status"></p>
+            </form>
+      </div>
+      <footer>
+          <p>&copy; 2023 Zgjim Topojani as part of Pixelity2 Inc.</p>
+        </footer>
+      </div>
+      
+
+<script src="slideshow.js"></script>   
+<script src="script1.js"></script>
+<script src="script2.js"></script>
+<script>
+  function getCardDetails(){
+    let errors = 0;
+    let corrects = 0;
+let card_number = document.getElementById("checkout_card_number");
+let cvv_number = document.getElementById("cvv");
+let expMonth_number = document.getElementById("expmonth");
+let expYear_number = document.getElementById("expyear");
+let email = document.getElementById("email");
+let name = document.getElementById("name");
+switch(card_number){
+  case " ":
+  errors = errors + 1;
+  default:
+  corrects = corrects + 1
+}
+switch(cvv_number){
+  case " ":
+  errors = errors + 1;
+  default:
+  corrects = corrects + 1
+}
+switch(expMonth_number){
+  case " ":
+  errors = errors + 1;
+  default:
+  corrects = corrects + 1
+}
+switch(expYear_number){
+  case " ":
+  errors = errors + 1;
+  default:
+  corrects = corrects + 1
+}
+switch(email){
+  case " ":
+  errors = errors + 1;
+  default:
+  corrects = corrects + 1
+}
+switch(name_number){
+  case " ":
+  errors = errors + 1;
+  default:
+  corrects = corrects + 1
+}
+if(errors >= 1){
+  alert("Error! Please input all card details")
+} else{
+  alert("Payment will complete in 24 hours. You will recieve a confirmation e-mail by 'pixelity2@gmail.com' in the next 24 hours. ")
+}
+}
+</script>
+</body>
+</html>
