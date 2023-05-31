@@ -1,4 +1,3 @@
-// Function to set a cookie
 function setCookie(name, value, days) {
     var expires = "";
     if (days) {
@@ -26,7 +25,6 @@ function setCookie(name, value, days) {
   }
   
   document.addEventListener('DOMContentLoaded', function() {
-    // Check if a username cookie exists
     var savedUsername = getCookie('username');
     if (savedUsername) {
       alert('Welcome back, ' + savedUsername + '!');
@@ -34,20 +32,18 @@ function setCookie(name, value, days) {
   
     var usernameInput = document.getElementById('username');
   
-    // Check if a username cookie exists
     var savedUsername = getCookie('username');
     if (savedUsername) {
       usernameInput.value = savedUsername;
     }
   
     document.getElementById('login-form').addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent form submission
+      event.preventDefault(); 
   
       var username = usernameInput.value;
       var password = document.getElementById('password').value;
   
       if (username === 'zgjimtopojani' && password === '123456') {
-        // Save the username in a cookie for 30 days
         setCookie('username', username, 30);
   
         alert('Login successful!');
