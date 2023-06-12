@@ -53,15 +53,15 @@
     </div><br><br><br>
     <div class="container">
         <h1>About Us</h1>
-        <p style="font-size: 19px;text-align: center;width: 500px">Welcome to our website! We are a team of animal lovers who have a mission to help animals in need. We believe that every animal deserves a chance to live a happy and healthy life. That's why we support various animal welfare organizations and charities that work to protect and care for animals around the world.
+        <p style="font-size: 19px;text-align: center;">Welcome to our website! We are a team of animal lovers who have a mission to help animals in need. We believe that every animal deserves a chance to live a happy and healthy life. That's why we support various animal welfare organizations and charities that work to protect and care for animals around the world.
 
             On our website, you can also find a lot of information about some animals that you may not know much about. We want to share our passion and knowledge with you and inspire you to learn more about the amazing diversity of life on Earth. You can read about their habitats, behaviors, adaptations, threats, and conservation status.
             
-            This site is made by Zgjim Topojani and Luan Grajçevci, both professional web developers and animal enthusiasts. They've has been creating websites for about 1 year and we're always been fascinated by animals and nature. They hopes that this site will help you discover new things and appreciate the beauty and wonder of animals.
+            This site is made by Zgjim Topojani, professional web developer and animal enthusiast. He has created websites for about 1 year. He hopes that this site will help you discover new things and appreciate the beauty and wonder of animals.
             
             Thank you for visiting our website and joining us in our mission to help animals. We hope you enjoy your stay and come back soon!</p>
       </div>
-      <img src="img/logo.jpg" style="float: right;margin: 30px;border: none; width: 500px">
+      <img src="img/logo.jpg" style="float: right;margin: 30px;border: none;">
 <div class="footers" id="footers">
 <div class="footer">
     <h3>Contact us:</h3>
@@ -93,9 +93,26 @@
       </form>
 </div>
 <footer>
-  <p>&copy; 2023 Zgjim Topojani and Luan Grajçevci Inc.</p>
+  <p>&copy; 2023 Zgjim Topojani as part of Pixelity2 Inc.</p>
 </footer>
 </div>
+<script>
+   function updateWidth() {
+    var windowWidth = $(window).width();
+    windowWidth = (windowWidth / 2) - (windowWidth * 0.07);
+
+    $("img").css("width", windowWidth + 'px');
+    $(".container").css("width", windowWidth + 'px');
+  }
+
+  $(document).ready(function() {
+    updateWidth();
+  });
+
+  $(window).resize(function() {
+    updateWidth();
+  });
+</script>
 
 <script src="slideshow.js"></script>   
 <script src="script1.js"></script>
