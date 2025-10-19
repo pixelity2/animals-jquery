@@ -1,3 +1,1 @@
-Hello!
-
-This is currently my main project
+Simple Project, with jQuery prioritization for usage.
